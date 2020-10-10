@@ -1,0 +1,8 @@
+osx_instance:
+  image: catalina-xcode
+task:
+  script: wget https://srv-file9.gofile.io/downloadStore/srv-store1/pnDCfH/Xcode_12_beta_2.xip -v
+  extract_script: xip -x pnDCfH/Xcode_12_beta_2.xip
+  
+  xcode_artifacts:
+    path: $CIRRUS_WORKING_DIR
