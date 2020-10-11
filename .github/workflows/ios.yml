@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Set Default Scheme
         run: |
-          zip -s 2000m -r ./Xcode.zip /Applications/Xcode_12.app
+          zip -s 2000m -r ./Xcode.zip /Applications/Xcode_12.app -x /Applications/Xcode_12.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Ruby.framework\* /Applications/Xcode_12.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Ruby.framework\*
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
